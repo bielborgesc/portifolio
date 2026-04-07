@@ -1,18 +1,21 @@
-import { personal } from '../data/portfolio'
+import { Link } from 'react-router-dom'
+import { usePortfolio } from '../hooks/usePortfolio'
 
 export default function Footer() {
+  const { meta, ui } = usePortfolio()
+
   return (
-    <footer className="border-t border-[#1a1a1a] py-8 flex items-center justify-between gap-4">
-      <p className="font-mono text-[11px] text-[#333]">
-        © {new Date().getFullYear()} {personal.name}
+    <footer className="border-t border-line-1 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <p className="font-mono text-[11px] text-fg-7">
+        © {new Date().getFullYear()} {meta.name}
       </p>
 
-      <button
-        onClick={() => window.print()}
-        className="font-mono text-[11px] text-[#444] hover:text-white underline underline-offset-4 decoration-[#2a2a2a] hover:decoration-[#555] transition-colors duration-200 cursor-pointer"
+      <Link
+        to="/curriculo"
+        className="font-mono text-[11px] text-fg-6 hover:text-fg underline underline-offset-4 decoration-line-4 hover:decoration-fg-5 transition-colors duration-200"
       >
-        baixar currículo.pdf
-      </button>
+        {ui.footer.resume}
+      </Link>
     </footer>
   )
 }

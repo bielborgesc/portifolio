@@ -1,21 +1,34 @@
-import { stack } from '../data/portfolio'
+import { usePortfolio } from '../hooks/usePortfolio'
 import { useFadeUp } from '../hooks/useFadeUp'
 
 export default function Stack() {
   const ref = useFadeUp()
+  const { personal, stack, curriculo, ui } = usePortfolio()
 
   return (
     <section
       id="sobre"
       ref={ref}
-      className="fade-up border-t border-[#1a1a1a] py-20"
-      aria-label="Stack principal"
+      className="fade-up border-t border-line-1 py-12 md:py-20"
+      aria-label="Sobre"
     >
-      <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#444] mb-8 block">
-        stack principal
+      <span className="font-mono text-xs uppercase tracking-[0.2em] text-fg-4 mb-8 block">
+        {ui.sections.about}
       </span>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="max-w-2xl mb-12">
+        {personal.about.split('\n\n').map((paragraph, i) => (
+          <p key={i} className="text-fg-2 text-base leading-relaxed mb-4 last:mb-0">
+            {paragraph}
+          </p>
+        ))}
+      </div>
+
+      <span className="font-mono text-xs uppercase tracking-[0.2em] text-fg-4 mb-6 block">
+        {ui.sections.stack}
+      </span>
+
+      <div className="flex flex-wrap gap-2 mb-12">
         {stack.primary.map((tech) => (
           <span
             key={tech}
@@ -27,12 +40,17 @@ export default function Stack() {
         {stack.secondary.map((tech) => (
           <span
             key={tech}
-            className="font-mono text-xs px-3 py-1.5 border border-[#222] text-[#555] hover:border-[#3a3a3a] hover:text-[#777] transition-colors duration-150 cursor-default"
+            className="font-mono text-xs px-3 py-1.5 border border-line-3 text-fg-5 hover:border-line-4 hover:text-fg-3 transition-colors duration-150 cursor-default"
           >
             {tech}
           </span>
         ))}
       </div>
+
+      <span className="font-mono text-xs uppercase tracking-[0.2em] text-fg-4 mb-4 block">
+        {ui.sections.languages}
+      </span>
+      <p className="font-mono text-sm text-fg-2">{curriculo.languages}</p>
     </section>
   )
 }
