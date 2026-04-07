@@ -16,11 +16,11 @@ export default function Experience() {
         {ui.sections.experience}
       </span>
 
-      <div>
+      <div className="divide-y divide-line-1">
         {experience.map((job, i) => (
           <div
             key={i}
-            className="grid md:grid-cols-[180px_1fr] gap-x-10 gap-y-3 py-8 border-b border-line-1 last:border-0"
+            className="grid md:grid-cols-[180px_1fr] gap-x-10 gap-y-3 py-8"
           >
             <div className="pt-0.5">
               <p className="font-mono text-xs text-fg-3 leading-relaxed">{job.period}</p>
