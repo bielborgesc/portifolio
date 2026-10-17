@@ -122,20 +122,24 @@ export default function Curriculo() {
 
         {/* Education */}
         <Section title={t.sections.education}>
-          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-            <div>
-              <h3 className="font-sora font-semibold text-fg text-[0.95rem]">
-                {education.degree}
-              </h3>
-              <p className="font-mono text-[11px] text-fg-4 mt-0.5">
-                {education.institution}
-              </p>
-            </div>
-            <div className="flex-shrink-0 sm:text-right">
-              <span className="font-mono text-[10px] text-fg-4">{education.period}</span>
-              <br />
-              <span className="font-mono text-[10px] text-accent">{education.status}</span>
-            </div>
+          <div className="space-y-4">
+            {education.map((item, i) => (
+              <div key={i} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <div>
+                  <h3 className="font-sora font-semibold text-fg text-[0.95rem]">
+                    {item.degree}
+                  </h3>
+                  <p className="font-mono text-[11px] text-fg-4 mt-0.5">
+                    {item.institution}
+                  </p>
+                </div>
+                <div className="flex-shrink-0 sm:text-right">
+                  <span className="font-mono text-[10px] text-fg-4">{item.period}</span>
+                  <br />
+                  <span className="font-mono text-[10px] text-accent">{item.status}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </Section>
 

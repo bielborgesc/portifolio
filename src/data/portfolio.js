@@ -2,7 +2,7 @@
 export const meta = {
   name: "Gabriel Borges",
   location: "São Carlos, SP",
-  available: true,
+  available: false,
   phone: "+55 (16) 99296-4877",
   email: "gabrielborges565@gmail.com",
   linkedin: "https://www.linkedin.com/in/bielborgesc",
@@ -11,8 +11,8 @@ export const meta = {
 }
 
 export const stack = {
-  primary: ["C#", "ASP.NET 9", "React", "TypeScript"],
-  secondary: ["Docker", "PostgreSQL", "GitHub Actions", "NestJS", "Oracle", "Entity Framework", "REST API", "Delphi"],
+  primary: ["Vue 3", "Sails.js", "Node.js", "MongoDB"],
+  secondary: ["Docker", "GitHub Actions", "TypeScript", "C#", "ASP.NET", "REST API", "PostgreSQL", "Jira"],
 }
 
 // ─── Translations ─────────────────────────────────────────────────────────────
@@ -20,25 +20,54 @@ export const portfolioData = {
   pt: {
     personal: {
       role: "Desenvolvedor de Software",
-      subtitle: "Desenvolvedor de Software | .NET | C# | React",
-      tagline: "Especializado em C#, ASP.NET 8 e APIs RESTful. {years}+ anos construindo sistemas financeiros críticos. Apaixonado por arquitetura de software e código limpo.",
-      about: "Desenvolvedor de software com {years}+ anos construindo sistemas financeiros críticos. Sou curioso por natureza — quando encontro um problema, preciso entender a causa raiz, não apenas resolver o sintoma. Tenho aversão a soluções improvisadas: prefiro fazer certo do que refatorar o que foi feito com pressa.\n\nMeu diferencial não é a stack — é a busca constante pelo conhecimento e pela melhor solução arquitetural possível. Inglês avançado. Busco equipe colaborativa com trabalho híbrido ou remoto.",
+      subtitle: "Desenvolvedor de Software | Vue 3 | Node.js | Full-stack",
+      tagline: "Desenvolvedor full-stack com {years}+ anos de experiência. Atualmente trabalhando com Vue 3, Sails.js e MongoDB em plataforma SaaS de saúde. Apaixonado por arquitetura de software e código limpo.",
+      about: "Desenvolvedor de software com {years}+ anos de experiência construindo aplicações web — de sistemas financeiros críticos a plataformas SaaS na área da saúde. Atualmente na Phelcom Technologies, trabalho com Vue 3, Sails.js e MongoDB no EyerCloud, plataforma de gestão de exames oftalmológicos em nuvem.\n\nSou curioso por natureza — quando encontro um problema, preciso entender a causa raiz, não apenas resolver o sintoma. Tenho aversão a soluções improvisadas: prefiro fazer certo do que refatorar o que foi feito com pressa.\n\nMeu diferencial não é a stack — é a busca constante pela melhor solução arquitetural possível. Inglês avançado e perfil colaborativo.",
     },
     projects: [
       {
-        name: "Piggino",
+        name: "Operix",
         label: "em produção",
         featured: true,
+        description: "SaaS ERP para pequenos negócios de serviço brasileiros — gestão de ordens de serviço, financeiro, clientes, orçamentos e PDV. Multi-empresa com controle de papéis. Back-end em ASP.NET com Clean Architecture 4 camadas, front-end em React 18 + TypeScript. Deploy automatizado via GitHub Actions no DigitalOcean.",
+        tags: ["ASP.NET", "React 18", "TypeScript", "Clean Architecture", "PostgreSQL", "Docker"],
+        demo: "https://operix.duckdns.org",
+        repo: "https://github.com/bielborgesc/operix",
+      },
+      {
+        name: "GetsCami",
+        label: "em desenvolvimento",
+        featured: false,
+        description: "Plataforma de gerenciamento de pedidos de camisetas para eventos e congressos. SPA instalável como PWA com geração de relatórios em PDF. Stack: React 19 + TypeScript + Supabase + TanStack Query.",
+        tags: ["React 19", "TypeScript", "Supabase", "PWA", "Tailwind CSS"],
+        repo: "https://github.com/bielborgesc/getscami",
+      },
+      {
+        name: "Piggino",
+        label: "em produção",
+        featured: false,
         description: "Assistente financeiro pessoal full-stack em produção. Back-end com Clean Architecture e DDD em ASP.NET 9, front-end em React 19 + TypeScript instalável como PWA. Deploy automatizado via GitHub Actions → Docker Hub → Digital Ocean. Integra com a API do BACEN para projeção de rendimentos com cálculo de IR/IOF.",
         tags: ["ASP.NET 9", "React 19", "TypeScript", "Clean Architecture", "Docker", "GitHub Actions"],
-        image: "https://github.com/user-attachments/assets/c84cb398-f8ee-46cc-b215-e4399e4c18e7",
         demo: "https://piggino.duckdns.org/",
         repo: "https://github.com/bielborgesc/piggino",
       },
     ],
     experience: [
       {
-        period: "Abr. 2023 — Presente",
+        period: "Jun. 2026 — Presente",
+        company: "Phelcom Technologies",
+        role: "Analista de Desenvolvimento de Software Jr 3",
+        location: "São Carlos, SP · Presencial",
+        bullets: [
+          "Desenvolve features no EyerCloud, plataforma SaaS de gestão de exames oftalmológicos em nuvem.",
+          "Desenvolvimento full-stack com Vue 3, Sails.js e MongoDB.",
+          "Levantamento de requisitos e refinamento de histórias com o time.",
+          "Code reviews e manutenção de qualidade de código.",
+          "Gestão de tarefas e entregas via Jira em metodologia ágil.",
+        ],
+      },
+      {
+        period: "Abr. 2023 — Mai. 2026",
         company: "LUZ Soluções Financeiras",
         role: "Desenvolvedor de Software Jr",
         location: "São Carlos, SP · Híbrido",
@@ -71,22 +100,30 @@ export const portfolioData = {
         ],
       },
     ],
-    education: {
-      degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
-      institution: "IFSP — Instituto Federal de São Paulo",
-      period: "Jan. 2020 — Jun. 2023",
-      status: "Concluído",
-    },
+    education: [
+      {
+        degree: "Pós-Graduação em Arquitetura de Software",
+        institution: "Anhanguera Educacional",
+        period: "Out. 2026 — Ago. 2027",
+        status: "Em andamento",
+      },
+      {
+        degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+        institution: "IFSP — Instituto Federal de São Paulo",
+        period: "Jan. 2020 — Jun. 2023",
+        status: "Concluído",
+      },
+    ],
     curriculo: {
-      about: "Desenvolvedor back-end com mais de {years} anos de experiência profissional, especializado em C#, ASP.NET 8 e APIs RESTful. Atuo com desenvolvimento e manutenção de sistemas financeiros críticos na LUZ Soluções Financeiras, com experiência em ambientes de alta complexidade, integração com clientes internacionais e trabalho em equipes ágeis. Tenho experiência full-stack com React e TypeScript, boas práticas de DevOps com Docker e GitHub Actions, e interesse em arquitetura de software, Clean Architecture e soluções SaaS escaláveis. Busco oportunidade como Desenvolvedor Pleno em empresa que valorize qualidade de código e evolução técnica.",
+      about: "Desenvolvedor de software com {years}+ anos de experiência construindo aplicações web — de sistemas financeiros críticos a plataformas SaaS na área da saúde. Atualmente na Phelcom Technologies, trabalho com Vue 3, Sails.js e MongoDB no EyerCloud, plataforma de gestão de exames oftalmológicos em nuvem. Tenho bagagem sólida em C# e ASP.NET de experiências anteriores, além de experiência com Docker, GitHub Actions e arquitetura de microsserviços. Sou curioso por natureza e tenho aversão a soluções improvisadas: prefiro entender a causa raiz do problema antes de resolvê-lo.",
       languages: "Português (Nativo), Inglês (Avançado)",
       technicalSkills: [
-        { label: "Linguagens", value: "C#, TypeScript" },
-        { label: "Back-End", value: "ASP.NET 8, .NET, NestJS, APIs RESTful, Entity Framework Core, Delphi" },
-        { label: "Front-End", value: "React, Angular, Vite, Tailwind CSS, Material UI" },
-        { label: "Bancos de Dados", value: "PostgreSQL, Oracle, MySQL, MongoDB, SQLite" },
-        { label: "DevOps & Cloud", value: "Docker, Docker Compose, GitHub Actions, CI/CD, AWS (EC2, CodeBuild, Serverless, Cognito), Caddy" },
-        { label: "Ferramentas", value: "Git, Bitbucket, Jira, Scrum, Kanban" },
+        { label: "Linguagens", value: "JavaScript, TypeScript, C#" },
+        { label: "Back-End", value: "Node.js, Sails.js, ASP.NET 8, NestJS, APIs RESTful, Entity Framework Core, Delphi" },
+        { label: "Front-End", value: "Vue 3, React, Angular, Vite, Tailwind CSS" },
+        { label: "Bancos de Dados", value: "MongoDB, PostgreSQL, Oracle, MySQL" },
+        { label: "DevOps & Cloud", value: "Docker, GitHub Actions, CI/CD, AWS (EC2, CodeBuild, Serverless, Cognito), Vercel" },
+        { label: "Ferramentas", value: "Git, Jira, Scrum, Kanban" },
         { label: "Arquitetura", value: "Clean Architecture, DDD, Microsserviços, APIs RESTful" },
       ],
     },
@@ -116,7 +153,7 @@ export const portfolioData = {
       },
       contact: {
         heading: "Vamos conversar?",
-        body: "Estou aberto a novas oportunidades — seja uma posição pleno, um projeto interessante ou só uma troca de ideia sobre arquitetura de software.",
+        body: "Não estou em busca ativa de oportunidades, mas estou sempre aberto a trocas sobre arquitetura de software, projetos interessantes ou colaborações.",
       },
       footer: { resume: "ver currículo" },
       notFound: {
@@ -144,25 +181,54 @@ export const portfolioData = {
   en: {
     personal: {
       role: "Software Developer",
-      subtitle: "Software Developer | .NET | C# | React",
-      tagline: "Specialized in C#, ASP.NET 8, and RESTful APIs. {years}+ years building critical financial systems. Passionate about software architecture and clean code.",
-      about: "Software developer with {years}+ years building critical financial systems. I'm naturally curious — when I encounter a problem, I need to understand the root cause, not just fix the symptom. I have a strong aversion to quick fixes: I'd rather take the time to do it right than refactor something rushed.\n\nMy differentiator isn't the stack — it's the constant pursuit of knowledge and the best possible architectural solution. Advanced English. Looking for a collaborative team with hybrid or remote work.",
+      subtitle: "Software Developer | Vue 3 | Node.js | Full-stack",
+      tagline: "Full-stack developer with {years}+ years of experience. Currently working with Vue 3, Sails.js, and MongoDB on a healthcare SaaS platform. Passionate about software architecture and clean code.",
+      about: "Software developer with {years}+ years of experience building web applications — from critical financial systems to healthcare SaaS platforms. Currently at Phelcom Technologies, I work with Vue 3, Sails.js, and MongoDB on EyerCloud, a cloud-based ophthalmic exam management platform.\n\nI'm naturally curious — when I encounter a problem, I need to understand the root cause, not just fix the symptom. I have a strong aversion to quick fixes: I'd rather take the time to do it right than refactor something rushed.\n\nMy differentiator isn't the stack — it's the constant pursuit of the best possible architectural solution. Advanced English and a collaborative profile.",
     },
     projects: [
       {
-        name: "Piggino",
+        name: "Operix",
         label: "in production",
         featured: true,
+        description: "SaaS ERP for small Brazilian service businesses — work order management, financials, clients, quotes, and point of sale. Multi-company with role-based access control. Back-end in ASP.NET with 4-layer Clean Architecture, front-end in React 18 + TypeScript. Automated deployment via GitHub Actions on DigitalOcean.",
+        tags: ["ASP.NET", "React 18", "TypeScript", "Clean Architecture", "PostgreSQL", "Docker"],
+        demo: "https://operix.duckdns.org",
+        repo: "https://github.com/bielborgesc/operix",
+      },
+      {
+        name: "GetsCami",
+        label: "in development",
+        featured: false,
+        description: "T-shirt order management platform for events and conferences. Installable as a PWA with PDF report generation. Stack: React 19 + TypeScript + Supabase + TanStack Query.",
+        tags: ["React 19", "TypeScript", "Supabase", "PWA", "Tailwind CSS"],
+        repo: "https://github.com/bielborgesc/getscami",
+      },
+      {
+        name: "Piggino",
+        label: "in production",
+        featured: false,
         description: "Full-stack personal finance assistant in production. Back-end with Clean Architecture and DDD in ASP.NET 9, front-end in React 19 + TypeScript installable as a PWA. Automated deployment via GitHub Actions → Docker Hub → Digital Ocean. Integrates with the BACEN API for yield projections with IR/IOF calculation.",
         tags: ["ASP.NET 9", "React 19", "TypeScript", "Clean Architecture", "Docker", "GitHub Actions"],
-        image: "https://github.com/user-attachments/assets/c84cb398-f8ee-46cc-b215-e4399e4c18e7",
         demo: "https://piggino.duckdns.org/",
         repo: "https://github.com/bielborgesc/piggino",
       },
     ],
     experience: [
       {
-        period: "Apr. 2023 — Present",
+        period: "Jun. 2026 — Present",
+        company: "Phelcom Technologies",
+        role: "Software Development Analyst Jr 3",
+        location: "São Carlos, SP · On-site",
+        bullets: [
+          "Develops features on EyerCloud, a cloud-based SaaS platform for ophthalmic exam management.",
+          "Full-stack development with Vue 3, Sails.js, and MongoDB.",
+          "Requirements gathering and story refinement with the team.",
+          "Code reviews and code quality maintenance.",
+          "Task and delivery management via Jira in an agile methodology.",
+        ],
+      },
+      {
+        period: "Apr. 2023 — May 2026",
         company: "LUZ Soluções Financeiras",
         role: "Software Developer Jr",
         location: "São Carlos, SP · Hybrid",
@@ -195,22 +261,30 @@ export const portfolioData = {
         ],
       },
     ],
-    education: {
-      degree: "Technology Degree in Systems Analysis and Development",
-      institution: "IFSP — Instituto Federal de São Paulo",
-      period: "Jan. 2020 — Jun. 2023",
-      status: "Completed",
-    },
+    education: [
+      {
+        degree: "Postgraduate in Software Architecture",
+        institution: "Anhanguera Educacional",
+        period: "Oct. 2026 — Aug. 2027",
+        status: "In progress",
+      },
+      {
+        degree: "Technology Degree in Systems Analysis and Development",
+        institution: "IFSP — Instituto Federal de São Paulo",
+        period: "Jan. 2020 — Jun. 2023",
+        status: "Completed",
+      },
+    ],
     curriculo: {
-      about: "Back-end software developer with {years}+ years of professional experience, specialized in C#, ASP.NET 8, and RESTful APIs. I work on the development and maintenance of mission-critical financial systems at LUZ Soluções Financeiras, with experience in high-complexity environments, international client integrations, and agile teams. I also have full-stack experience with React and TypeScript, solid DevOps practices using Docker and GitHub Actions, and a strong interest in software architecture, Clean Architecture, and scalable SaaS solutions. I am looking for a Mid-Level Developer position at a company that values code quality and technical growth.",
+      about: "Software developer with {years}+ years of experience building web applications — from critical financial systems to healthcare SaaS platforms. Currently at Phelcom Technologies, I work with Vue 3, Sails.js, and MongoDB on EyerCloud, a cloud-based ophthalmic exam management platform. I have a solid background in C# and ASP.NET from previous experiences, along with experience in Docker, GitHub Actions, and microservices architecture. I'm naturally curious and have a strong aversion to quick fixes: I prefer to understand the root cause of a problem before solving it.",
       languages: "Portuguese (Native), English (Advanced)",
       technicalSkills: [
-        { label: "Languages", value: "C#, TypeScript, Python" },
-        { label: "Back-End", value: "ASP.NET 8, .NET, NestJS, RESTful APIs, Entity Framework Core, Delphi" },
-        { label: "Front-End", value: "React, Angular, Vite, Tailwind CSS, Material UI" },
-        { label: "Databases", value: "PostgreSQL, Oracle, MySQL, MongoDB, SQLite" },
-        { label: "DevOps & Cloud", value: "Docker, Docker Compose, GitHub Actions, CI/CD, AWS (EC2, CodeBuild, Serverless, Cognito), Caddy" },
-        { label: "Tools & Methods", value: "Git, Bitbucket, Jira, Scrum, Kanban" },
+        { label: "Languages", value: "JavaScript, TypeScript, C#" },
+        { label: "Back-End", value: "Node.js, Sails.js, ASP.NET 8, NestJS, RESTful APIs, Entity Framework Core, Delphi" },
+        { label: "Front-End", value: "Vue 3, React, Angular, Vite, Tailwind CSS" },
+        { label: "Databases", value: "MongoDB, PostgreSQL, Oracle, MySQL" },
+        { label: "DevOps & Cloud", value: "Docker, GitHub Actions, CI/CD, AWS (EC2, CodeBuild, Serverless, Cognito), Vercel" },
+        { label: "Tools & Methods", value: "Git, Jira, Scrum, Kanban" },
         { label: "Architecture", value: "Clean Architecture, DDD, Microservices, RESTful APIs" },
       ],
     },
@@ -240,7 +314,7 @@ export const portfolioData = {
       },
       contact: {
         heading: "Let's talk?",
-        body: "I'm open to new opportunities — whether a mid-level position, an interesting project, or just a conversation about software architecture.",
+        body: "I'm not actively looking for opportunities, but I'm always open to conversations about software architecture, interesting projects, or collaborations.",
       },
       footer: { resume: "view resume" },
       notFound: {

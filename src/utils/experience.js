@@ -1,5 +1,5 @@
-const LUZ_START = new Date(2023, 3, 1) // April 2023
+const CAREER_START = new Date(2021, 5, 1) // junho 2021 — primeira experiência profissional (Alkent)
 
 export function getYearsExp() {
-  return Math.floor((Date.now() - LUZ_START.getTime()) / (1000 * 60 * 60 * 24 * 365.25))
+  return Math.floor((Date.now() - CAREER_START.getTime()) / (1000 * 60 * 60 * 24 * 365.25))
 }

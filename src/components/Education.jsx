@@ -16,17 +16,21 @@ export default function Education() {
         {ui.sections.education}
       </span>
 
-      <div className="grid md:grid-cols-[180px_1fr] gap-x-10 gap-y-3">
-        <div className="pt-0.5">
-          <p className="font-mono text-xs text-fg-3 leading-relaxed">{education.period}</p>
-          <p className="font-mono text-[11px] text-accent mt-1">{education.status}</p>
-        </div>
-        <div>
-          <h3 className="font-sora font-semibold text-fg text-[1.05rem] leading-snug">
-            {education.degree}
-          </h3>
-          <p className="font-mono text-[11px] text-accent mt-1">{education.institution}</p>
-        </div>
+      <div className="space-y-8">
+        {education.map((item, i) => (
+          <div key={i} className="grid md:grid-cols-[180px_1fr] gap-x-10 gap-y-3">
+            <div className="pt-0.5">
+              <p className="font-mono text-xs text-fg-3 leading-relaxed">{item.period}</p>
+              <p className="font-mono text-[11px] text-accent mt-1">{item.status}</p>
+            </div>
+            <div>
+              <h3 className="font-sora font-semibold text-fg text-[1.05rem] leading-snug">
+                {item.degree}
+              </h3>
+              <p className="font-mono text-[11px] text-accent mt-1">{item.institution}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )
